@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css?family=B612&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* css variables */
+:root {
+    --primary-color: #aaa;
+    --secondary-color:#555;
+    --tertiary-color:#000;
+    --color-white: #fff;
+    --color-pink:#f42;
+    --color-light-black: #131313;
+}
+/* general styles */
+/* margin */
+.mt-4 {
+    margin-top: 4rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.container {
+    width: 95%;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+.row {
+    display: grid;
+}
+ul {
+    list-style: none;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+/* header nav */
+ 
+ 
+#header .nav-top,.nav-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header .nav-top {
+    padding: 1rem;
+     height: 40px;
+    background-color: var(--color-light-black);
+}
+#header .nav-left,.nav-right {
+    display: flex;
+}
+#header .nav a {
+    color: var(--primary-color);
+    padding-right: 1.2rem;
+}
+#header .nav-top a:hover {
+   color: var(--color-white);
+}
+#header .nav-bottom a:hover {
+    color: var(--tertiary-color);
+}
+#header .nav-bottom .nav-left,.nav-right {
+    padding: 1rem;
+}
+#header .nav-bottom .nav-right {
+    border-left: 1px solid #000;
+}
+#header a.nav__banner{
+    
+    background-color: yellow;
+    display: block;
+    color: var(--tertiary-color);
+    padding: 0.5rem 1rem;
+}
+/* hamburger menue */
+.hamburger-menu {
+    cursor: pointer;
+    display: none;     
+}
+.hamburger-menu .lines {
+    background-color: var(--tertiary-color);
+    width: 40px;
+    height: 2px;
+    margin-bottom: 7px;
+}
+/* main header */
+.main__header {
+    margin: 0.3rem;
+}
+.main__header h1 {
+    font-family: B612, monospace, sans-serif;
+}
+.main__header .row{
+    
+    grid-template-areas: 
+    "main main side-1"
+    "main main side-2";
+    grid-gap: 5px;
+}
+.main__header .article--1 {
+    background: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/03/Untitled-design37-796x417.png) center no-repeat;
+    background-size: cover;
+    grid-area: main;
+}
+.main__header .img-container {
+    padding: 1rem 1rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    
+    color: var(--primary-color);
+}
+.main__header .logo {
+    width: 30vw;
+}
+.main__header .main-title-container {
+    margin-top: 8rem;
+    padding: 2rem 1.5rem;
+}
+.main__header .main-title {
+    font-size: 3rem;
+    color: var(--color-white);
+    font-weight: bold;
+}
+
+.main__header .main-title-container p {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.main__header .main-title-container a {
+    color: var(--primary-color);
+}
+
+.main__header .main-title-container a:hover {
+    color: var(--color-white);
+}
+.article--2,
+.article--3 {
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    color: var(--color-white);
+}
+/* article sidebar top   */
+.main__header .article--2 {
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/03/P30-4-of-5-796x417.jpg") center no-repeat;
+    background-size: cover;
+    grid-area: side-1;
+}
+.main__header .article--2 .main-title {
+    font-size: 1.7rem;
+}
+.main__header .article--2 p {
+    margin: 0;
+}
+.main__header  a {
+    color: var(--primary-color);
+}
+
+.main__header   p {
+    color: var(--primary-color);
+}
+/* article sidebar bottom */
+.main__header .article--3 {
+    background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/baldbezos-796x417.jpg");
+    grid-area: side-2;
+}
+.main__header .main-title-container-3 .main-title {
+    font-size: 1.7rem;
+}
+.main__header .main-title-container-3 p {
+    margin: 0;
+}
+
+/* latest news */
+
+#latest-news .row {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+#latest-news .news-link {
+    color: var(--color-pink);
+    font-size: 2rem;
+    font-weight: bold;
+}
+#latest-news a {
+    margin-top: 0.7rem;
+    display: block;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--tertiary-color);
+}
+#latest-news p {
+    padding-top: 0.5rem;
+    color: var(--primary-color);
+    margin-left: 0;
+}
+#latest-news p a {
+    display: inline-block;
+    font-size: 1rem;
+    padding-right: 0.7rem;
+    color: var(--secondary-color);
+}
+#latest-news p a:hover {
+    color: var(--color-light-black);
+}
+#latest-news a:hover {
+    color: var(--color-pink);
+}
+#latest-news .latest-news-img {
+    background: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/03/YouTube-Dark-516x270.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 130px;
+    
+}
+/* fundings */
+#fundings {
+    margin-top: 9rem;
+}
+#fundings article {
+    position: relative;
+    background-color: #fffaf8;
+}
+
+#fundings ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#fundings .links-right {
+    display: flex;
+}
+
+#fundings .links-right a {
+    border-right: 1px solid var(--color-pink);
+    padding: 0 0.5rem;
+    font-weight: 600;
+}
+#fundings .links-right a.last {
+    border-right: 0;
+}
+#fundings .links-left a {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+#fundings a {
+    margin-bottom: 0.8rem;
+    color: var(--color-pink);
+
+}
+#fundings .row {
+     
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 20px;
+}
+/* funding card */
+#fundings a {
+    display: block;
+    margin: 0;
+}
+
+.compnay__title h4 {
+    margin-left: 5rem;
+}.funding__amount-container h4,p {
+    margin-left: 5rem;
+}
+#fundings .compnay__title {
+    background-color: #f42;
+    color: var(--color-white);
+    padding: 0.8rem 0;
+    
+}
+#fundings .funding__amount-container {
+    background-color: pink;
+    padding: 0.8rem 0;
+    margin-bottom: 1rem;
+}
+#fundings .funding__amount {
+    font-size: 1.1rem;
+}
+#fundings .funding__amount-container p {
+    color: var(--primary-color);
+}
+#fundings .company__logo {
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    left: 10px;
+    z-index: 1000;
+    
+}
+#fundings .bar-pink {
+    color: var(--color-pink);
+}
+#fundings .pl-1 {
+    color: var(--secondary-color);
+    padding-left: 10px;
+}
+#fundings .mb-1 {
+    margin-bottom: 1rem;
+}
+#fundings .mt-1 {
+    margin-top: 1rem;
+}
+ 
+/* articles */
+#articles article {
+    margin-bottom: 3rem;
+}
+#articles .articles__link {
+    font-size: 2rem;
+    color: var(--color-pink);
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+#articles .row {
+    margin-top: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+#articles .articles__main-img {
+    display: block;
+    background: url(https://images.unsplash.com/photo-1547058337-e8679fe091dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    color: var(--color-white);
+    display: flex;
+    align-items: flex-end;
+}
+#articles span, .article__title {
+    display: block;
+     
+}
+#articles .article__title {
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding: 0.4rem 0;
+}
+#articles p a {
+    color: var(--primary-color);
+}
+#articles p a:hover {
+    color: var(--color-white);
+}
+#articles .article__container {
+    padding: 1rem;
+}
+#articles .articles__main-img p {
+    margin: 0;
+}
+#articles .latest__article-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fffaf8;
+}
+#articles .img {
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/02/Netflix.jpg") center no-repeat;
+    background-size: cover;
+    width: 130px;
+    height: 90px;
+}
+#articles .latest__article-container div {
+    padding: 0.7rem;
+    color: var(--color-pink);
+}
+#articles .latest__article-container div a {
+    color: var(--color-pink);
+}
+#articles .latest__article-container div a:hover {
+    text-decoration: underline;
+}
+
+#articles .articles__link-list {
+    font-size: 0.9rem;
+    padding-top: 1rem;
+}
+#articles .articles__link-list li {
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--primary-color);
+    list-style: red;
+}
+#articles li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: red; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+#articles .articles__link-list a {
+    padding-top: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* deals */
+#deals .row {
+    margin-top: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+#deals .deals__img {
+    background: url("https://cdnp2.stackassets.com/734245696d515938336d4ed978c1d5008666529d/store/7cbb8a352220f9569bdd3aebebb3b76fdaa11906cdb4e3f6a04dd785563a/sale_26800_primary_image.jpg") center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+    margin-right: 1rem;
+}
+#deals .deals__link {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--tertiary-color);
+}
+
+#deals .deals__link:hover {
+    color: var(--color-pink);
+}
+
+#deals p {
+    margin: 0;
+}
+#deals .line-throgh {
+    text-decoration: line-through;
+    color: var(--secondary-color);
+    padding-right: 0.7rem;
+    font-size: 0.9rem;
+}
+#deals .price {
+    font-size: 1.1rem;
+}
+ 
+
+/* footer */
+#footer {
+    margin-top: 5rem;
+}
+#footer .footer-container-top {
+    padding: 4rem 0;
+    background-color: var(--color-light-black);
+
+}
+#footer ul {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+#footer ul li {
+    margin-right: 1rem;
+    
+}
+#footer .social-media a {
+    padding: 0 1rem;
+    background-color: gray;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    border: 1px solid var(--secondary-color);
+}
+#footer .social-media a:hover {
+    background-color: var(--tertiary-color);
+}
+#footer .social-media {
+    width: 90%;
+    max-width: 600px;   
+}
+#footer .footer-links {
+    margin-top: 2rem;
+}
+#footer .footer-links a {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    
+}
+
+#footer .footer-container-bottom {
+    padding: 2rem 0;
+    background-color: var(--tertiary-color);
+}
+#footer .footer-container-bottom p {
+    font-size: 0.9rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+#footer .footer-container-bottom a {
+    color: transparent;
+    width: 60px;
+    height: 20px;
+}
+
+#footer .footer-container-bottom .fa-heart {
+    color: red;
+}
+
+
+/* media queries */
+@media (max-width: 1200px) {
+    .main__header .main-title {
+        font-size: 2.2rem;
+    }
+    .main__header .main-title-container {
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 1000px) {
+    #fundings .remove {
+        display: none;
+    }
+    .main__header .main-title {
+        font-size: 1.7rem;
+    }
+    .main__header .img-container {
+        display: none;
+    }
+}
+ 
+@media (max-width: 770px){
+    #header .nav-top{
+        display: none;
+    }
+    #header a.nav__banner {
+        display: none;
+    }
+    #header .hamburger-menu {
+        display: block;
+    }
+    #header .nav-bottom {
+        justify-content: flex-end;
+    }
+    #header .nav-bottom .nav-left {
+        display: none;
+    }
+    .main__header .row {
+        grid-template-areas: 
+    "main main main"
+    "side-1 side-1 side-1"
+    "side-2 side-2 side-2";
+    } 
+    .main__header .main-title-container {
+        margin: 0;
+        padding: 1rem;
+    }
+    .main__header [class^="main-title-container"] .main-title{
+        font-size: 1.2rem;
+    }
+    .main__header [class^="main-title-container"] p {
+        margin: 0;
+    }
+     
+    #latest-news .row {
+        grid-template-columns: 1fr
+    }
+    #latest-news article {
+        display: flex;
+    }
+     
+    #latest-news .latest-news-img {
+        width: 90px;
+        height: 60px;
+        margin-right: 1rem;
+    }
+    #latest-news a {
+        font-size: 1rem;
+    }
+    #fundings .row{
+        grid-template-columns: 1fr;
+    }
+    #fundings ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #fundings .links-right {
+        display: block;
+        border: 0;
+    }
+     
+    #fundings .rm-sm {
+        display: none;
+    }
+    #deals .row {
+        grid-template-columns: 1fr;
+    }
+    #deals article {
+        display: flex;
+       
+    }
+    #deals .deals__img {
+        width: 50px;
+        height: 50px;
+    }
+    #deals .deals__link {
+        font-size: 1rem;
+    }
+}
